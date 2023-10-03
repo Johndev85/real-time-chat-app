@@ -5,7 +5,7 @@ import styles from "./chat.module.css"
 import { useEffect, useState, useRef } from "react"
 import io from "socket.io-client"
 
-const socket = io()
+const socket = io("/")
 
 const ChatWindow = () => {
   const [message, setMessage] = useState("")
