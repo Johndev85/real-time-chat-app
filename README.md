@@ -1,10 +1,10 @@
 # Real-time-chat-app
 
+![Alt text](frontend/public/chat-app.png)
+
 **API Deploy:**
 
-### [https://johndev85.github.io/weather-app-js/](https://johndev85.github.io/weather-app-js/)
-
----
+## -Pending. (configuring the server with the provider.)
 
 ## 🎯 Objective
 
@@ -12,7 +12,23 @@
 
 ---
 
+## 🗝 Features
+
+- Sending and reception of real -time messages from multiple instances of Socket.
+- Differentiation of the issuer and receiver messages.
+
+#### Development features:
+
+- Change id for username.
+- Add emoticons system.
+
+---
+
 ## 🚀 Getting started
+
+### Prerequisites:
+
+- **Node version 14.x**
 
 If you want to run the site locally, you can:
 
@@ -31,21 +47,29 @@ cd real-time-chat-app
 3. Open server:
 
 ```bash
-  cd server
+cd server
 ```
 
 ```bash
- npm run dev
+npm i
+```
+
+```bash
+npm run dev
 ```
 
 4. Open frontend:
 
 ```bash
- cd frontend
+cd frontend
 ```
 
 ```bash
- npm run dev
+npm i
+```
+
+```bash
+npm run dev
 ```
 
 ---
@@ -71,8 +95,12 @@ cd real-time-chat-app
 ## 💻 Technologies:
 
 - React
-- JavaScript
+- Vitejs
 - Socket.IO
+- Nodejs
+- Express
+- JavaScript
 - CSS3
+- HTML5
 
 ---

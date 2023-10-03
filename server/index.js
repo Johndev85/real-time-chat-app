@@ -1,7 +1,7 @@
 import express from "express"
 import http from "http"
 import { Server as SocketServer } from "socket.io"
-import { resolve, dirname } from "path"
+import { resolve } from "path"
 import cors from "cors"
 import morgan from "morgan"
 
