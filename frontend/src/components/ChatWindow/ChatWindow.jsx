@@ -65,9 +65,12 @@ const ChatWindow = () => {
 
       <form ref={formChat}>
         <input
+          name="message"
           type="text"
           placeholder="Type a message..."
           onChange={(e) => setMessage(e.target.value)}
+          value={message}
+          autoFocus
         />
       </form>
     </div>

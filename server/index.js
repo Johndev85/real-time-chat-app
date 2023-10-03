@@ -10,7 +10,7 @@ import { PORT } from "./config.js"
 //initializations
 const app = express()
 const server = http.createServer(app)
-const io = new SocketServer(server)
+const io = new SocketServer(server, {})
 
 // Middlewares
 app.use(cors())
@@ -21,7 +21,6 @@ app.use(express.static(resolve("frontend/dist")))
 
 io.on("connection", (socket) => {
   console.log(socket.id)
-
   socket.on("message", (body) => {
     socket.broadcast.emit("message", {
       body,
@@ -29,10 +28,6 @@ io.on("connection", (socket) => {
     })
     console.log(body)
   })
-})
-
-app.get("/", (req, res) => {
-  res.send("<h1>Hello...</h1>")
 })
 
 server.listen(PORT)
