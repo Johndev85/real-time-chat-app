@@ -31,5 +31,9 @@ io.on("connection", (socket) => {
   })
 })
 
+app.get("/", (req, res) => {
+  res.send("<h1>Hello...</h1>")
+})
+
 server.listen(PORT)
 console.log("server running at", PORT)
