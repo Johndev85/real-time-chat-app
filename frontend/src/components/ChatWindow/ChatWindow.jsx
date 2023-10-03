@@ -33,7 +33,7 @@ const ChatWindow = () => {
     return () => {
       socket.off("message")
     }
-  }, [message])
+  }, [messages])
 
   const receiveMessage = (message) =>
     setMessages((state) => [...state, message])
@@ -69,7 +69,6 @@ const ChatWindow = () => {
           type="text"
           placeholder="Type a message..."
           onChange={(e) => setMessage(e.target.value)}
-          value={message}
           autoFocus
         />
       </form>
