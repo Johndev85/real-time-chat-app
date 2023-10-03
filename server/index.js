@@ -1,10 +1,23 @@
 import express from "express"
 import http from "http"
 import { Server as SocketServer } from "socket.io"
+import { resolve, dirname } from "path"
+import cors from "cors"
+import morgan from "morgan"
 
+import { PORT } from "./config.js"
+
+//initializations
 const app = express()
 const server = http.createServer(app)
 const io = new SocketServer(server)
+
+// Middlewares
+app.use(cors())
+app.use(morgan("dev"))
+app.use(express.urlencoded({ extended: false }))
+
+app.use(express.static(resolve("frontend/dist")))
 
 io.on("connection", (socket) => {
   console.log(socket.id)
@@ -19,9 +32,8 @@ io.on("connection", (socket) => {
 })
 
 app.get("/", (req, res) => {
-  res.send("<h1>Hello world</h1>")
+  res.send("<h1>Hello...</h1>")
 })
 
-server.listen(3000, () => {
-  console.log("server running at http://localhost:3000")
-})
+server.listen(PORT)
+console.log("server running at", PORT)
