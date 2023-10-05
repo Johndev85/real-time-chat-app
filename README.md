@@ -4,7 +4,7 @@
 
 **API Deploy:**
 
-## -Pending. (configuring the server with the provider.)
+## https://real-time-chat-app-production-f849.up.railway.app/
 
 ## 🎯 Objective
 
@@ -76,7 +76,7 @@ npm run dev
 
 ## 🛠 Deployment
 
-- Deploy: Render
+- Deploy: [https://railway.app/ ](https://railway.app/)
 
 ---
 
@@ -102,5 +102,6 @@ npm run dev
 - JavaScript
 - CSS3
 - HTML5
+- Railway
 
 ---
